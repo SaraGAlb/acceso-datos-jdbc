@@ -22,6 +22,12 @@ public class CrudDemo {
                 () -> System.out.println("No encontrado")
         );
 
+        System.out.println("\n=== SEARCH BY TITULO ===");
+        // Llama al método searchByTitulo del DAO buscando libros cuyo título contenga "Harry"
+        var encontrados = dao.searchByTitulo("Harry"); 
+        // Recorre la lista de libros encontrados y los imprime por consola
+        encontrados.forEach(System.out::println);
+
         System.out.println("\n=== UPDATE (marcar no disponible) ===");
         nuevo.setDisponible(false);
         boolean updated = dao.update(nuevo);
