@@ -1,6 +1,0 @@
-/target/
-.idea/
-*.iml
-*.log
-
-src/main/resources/db.properties
