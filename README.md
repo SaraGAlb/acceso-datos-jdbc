@@ -47,4 +47,4 @@ Evolución del proyecto anterior aplicando una arquitectura en capas real: model
 **Sara García Albandea**  
 Estudiante de 2º DAM — Centro Formativo Digitech  
 📧 sg.albandea@gmail.com  
-🔗 [GitHub](https://github.com/tu-usuario)
+🔗 [GitHub](https://github.com/SaraGAlb)
