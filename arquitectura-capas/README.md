@@ -101,11 +101,11 @@ mvn test
 
 | | jdbc-basico | arquitectura-capas |
 |---|---|---|
-| Capas | 1 (DAO + main) | 4 (modelo, repo, servicio, app) |
+| Capas | 3 (dao, db, model) | 4 (repository, service, db, model) |
 | Interfaz de repositorio | ❌ | ✅ |
-| Lógica de negocio separada | ❌ | ✅ |
-| Facilidad para hacer tests | Baja | Alta |
-| Escalabilidad | Baja | Alta |
+| Capa de servicio con lógica de negocio | ❌ | ✅ |
+| Facilidad para hacer tests | Media | Alta |
+| Escalabilidad | Media | Alta |
 
 ---
 
