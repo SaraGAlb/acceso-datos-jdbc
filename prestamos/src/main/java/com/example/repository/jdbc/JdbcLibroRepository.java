@@ -196,4 +196,30 @@ public boolean update(Connection con, Libro libro) throws SQLException {
     }
 }
 
+//Comprobar si un libro está disponible para préstamo (disponible=true)
+public boolean isDisponible(Connection con, int libroId) throws SQLException {
+    String sql = "SELECT disponible FROM libro WHERE id = ?";
+
+    try (PreparedStatement ps = con.prepareStatement(sql)) {
+        ps.setInt(1, libroId);
+
+        try (ResultSet rs = ps.executeQuery()) {
+            if (!rs.next()) return false;
+            return rs.getBoolean("disponible");
+        }
+    }
+}
+
+// Actualizar el estado de disponibilidad de un libro (disponible=true o false)
+public boolean updateDisponible(Connection con, int libroId, boolean disponible) throws SQLException {
+    String sql = "UPDATE libro SET disponible = ? WHERE id = ?";
+
+    try (PreparedStatement ps = con.prepareStatement(sql)) {
+        ps.setBoolean(1, disponible);
+        ps.setInt(2, libroId);
+
+        return ps.executeUpdate() == 1;
+    }
+}
+
 }
