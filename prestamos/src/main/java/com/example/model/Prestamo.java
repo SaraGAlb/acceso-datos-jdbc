@@ -50,4 +50,16 @@ public class Prestamo {
     public void setFechaDevolucion(LocalDate fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
+
+    @Override
+    public String toString() {
+        return "Prestamo{" +
+                "id=" + id +
+                ", usuarioId=" + usuarioId +
+                ", libroId=" + libroId +
+                ", fechaInicio=" + fechaInicio +
+                ", fechaFin=" + fechaFin +
+                ", fechaDevolucion=" + fechaDevolucion +
+                '}';
+    }
 }
